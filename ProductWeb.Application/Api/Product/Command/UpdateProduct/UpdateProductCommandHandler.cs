@@ -12,9 +12,9 @@ namespace ProductWeb.Application.Api.Product.Command.UpdateProduct
 {
 	public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand, DefaultResponse>
 	{
-		private readonly IAssignmentDbContext _context;
+		private readonly IProductWebDbContext _context;
 		private IProductValidate _checker;
-		public UpdateProductCommandHandler(IAssignmentDbContext context, IProductValidate checker)
+		public UpdateProductCommandHandler(IProductWebDbContext context, IProductValidate checker)
 		{
 			_context = context;
 			_checker = checker;

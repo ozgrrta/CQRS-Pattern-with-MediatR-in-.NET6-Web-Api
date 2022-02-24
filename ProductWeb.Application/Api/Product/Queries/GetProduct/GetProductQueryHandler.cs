@@ -13,9 +13,9 @@ namespace ProductWeb.Application.Api.Product.Queries.GetProduct
 {
 	public class GetProductQueryHandler : IRequestHandler<GetProductQuery, DefaultResponse<GetProductDto>>
 	{
-		private readonly IAssignmentDbContext _context;
+		private readonly IProductWebDbContext _context;
 		private readonly IMapper _mapper;
-		public GetProductQueryHandler(IAssignmentDbContext context, IMapper mapper)
+		public GetProductQueryHandler(IProductWebDbContext context, IMapper mapper)
 		{
 			_context = context;
 			_mapper = mapper;

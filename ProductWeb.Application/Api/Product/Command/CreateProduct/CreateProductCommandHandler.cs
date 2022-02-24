@@ -12,9 +12,9 @@ namespace ProductWeb.Application.Api.Product.Command.CreateProduct
 {
 	public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, DefaultResponse>
 	{
-		private readonly IAssignmentDbContext _context;
+		private readonly IProductWebDbContext _context;
 		private IProductValidate _checker;
-		public CreateProductCommandHandler(IAssignmentDbContext context, IProductValidate checker)
+		public CreateProductCommandHandler(IProductWebDbContext context, IProductValidate checker)
 		{
 			_context = context;
 			_checker = checker;

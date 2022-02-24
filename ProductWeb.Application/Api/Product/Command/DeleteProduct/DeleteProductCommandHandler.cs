@@ -12,8 +12,8 @@ namespace ProductWeb.Application.Api.Product.Command.DeleteProduct
 {
 	public class DeleteProductCommandHandler : IRequestHandler<DeleteProductCommand, DefaultResponse>
 	{
-		private readonly IAssignmentDbContext _context;
-		public DeleteProductCommandHandler(IAssignmentDbContext context)
+		private readonly IProductWebDbContext _context;
+		public DeleteProductCommandHandler(IProductWebDbContext context)
 		{
 			_context = context;
 		}
