@@ -19,11 +19,11 @@ namespace ProductWeb.Persistence
 
 			if (currentDb == "postgre")
 			{
-				services.AddDbContext<AssignmentDbContext>(options =>
+				services.AddDbContext<ProductWebDbContext>(options =>
 					options.UseNpgsql(connectionString, o =>
 						o.MigrationsHistoryTable("__MigrationHistoryOfCore")));
 
-				services.AddTransient<IAssignmentDbContext>(provider => provider.GetService<AssignmentDbContext>());
+				services.AddTransient<IProductWebDbContext>(provider => provider.GetService<ProductWebDbContext>());
 			}
 
 			return services;
